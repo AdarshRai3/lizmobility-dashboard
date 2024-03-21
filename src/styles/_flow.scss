@@ -74,21 +74,15 @@
     justify-content: center;
     flex-grow: 1;
     position: relative;
-  }
+}
+
+.react-flow__node-turbo .title {
   
-  .react-flow__node-turbo .icon {
-    margin-right: 8px;
-  }
-  
-  .react-flow__node-turbo .body {
-    display: flex;
-  }
-  
-  .react-flow__node-turbo .title {
-    font-size: 16px;
-    margin-bottom: 2px;
-    line-height: 1;
-  }
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 2px;
+  line-height: 1;
+}
   
   .react-flow__node-turbo .subline {
     font-size: 12px;

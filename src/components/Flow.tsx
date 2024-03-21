@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import ReactFlow, { Controls, useNodesState, useEdgesState, addEdge, Node, Edge } from 'reactflow';
+import ReactFlow, { Controls, useNodesState, useEdgesState, addEdge, Node, Edge, MiniMap } from 'reactflow';
 import 'reactflow/dist/base.css';
 import TurboNode, { TurboNodeData } from './TurboNode';
 import TurboEdge from './TurboEdge';
@@ -9,7 +9,7 @@ const initialNodes: Node<TurboNodeData>[] = [
   {
     id: '1',
     position: { x:-500, y: 0 },
-    data: { title: 'Project'},
+    data: { title: 'Project', details: 'Project Details'},
     type: 'turbo',
   },
   {
