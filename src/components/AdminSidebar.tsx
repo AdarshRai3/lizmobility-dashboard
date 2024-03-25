@@ -71,7 +71,7 @@ const DivOne = ({ location }: { location: Location }) => (
     <h5>Dashboard</h5>
     <ul>
       <Li
-        url="/admin/dashboard"
+        url="/"
         text="Dashboard"
         Icon={RiDashboardFill}
         location={location}
