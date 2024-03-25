@@ -39,3 +39,12 @@
     width:$size;
     height:$size;
 }
+
+@mixin box($w:5rem,$h:5rem){
+    width:$w;
+    height:$h;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}

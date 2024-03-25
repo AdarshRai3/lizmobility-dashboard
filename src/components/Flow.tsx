@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import ReactFlow, { Controls, useNodesState, useEdgesState, addEdge, Node, Edge, MiniMap } from 'reactflow';
+import ReactFlow, { Controls, useNodesState, useEdgesState, addEdge, Node, Edge} from 'reactflow';
 import 'reactflow/dist/base.css';
 import TurboNode, { TurboNodeData } from './TurboNode';
 import TurboEdge from './TurboEdge';
@@ -9,85 +9,169 @@ const initialNodes: Node<TurboNodeData>[] = [
   {
     id: '1',
     position: { x:-500, y: 0 },
-    data: { title: 'Project', details: 'Project Details'},
+    data: { 
+      title: 'Project',
+      details:{
+        image: 'https://reactflow.dev/img/logo.svg',
+        text: 'This is the project panel contains the information about the car manufacturing project',
+      }
+    },
     type: 'turbo',
   },
   {
     id: '2',
     position: { x:-250, y: -250 },
-    data: {title: 'Research'},
+    data: {
+      title: 'Market Research',
+      details:{
+        image: 'https://reactflow.dev/img/logo.svg',
+        text: 'This phase involves conducting market research to understand the needs and preferences of the customers.',
+      }
+    },
     type: 'turbo',
   },
   {
     id: '3',
     position: { x: -250, y: -125 },
-    data: { title: 'Planning'},
+    data: { 
+      title: 'Planning',
+      details:{
+        image: 'https://reactflow.dev/img/logo.svg',
+        text: 'In this phase, the project plan is developed including the timeline, resources, and cost estimates.',
+      }
+    },
     type: 'turbo',
   },
   {
     id: '4',
     position: { x: -250, y: 0 },
-    data: { title: 'Designing'},
+    data: { 
+      title: 'Design',
+      details:{
+        image: 'https://reactflow.dev/img/logo.svg',
+        text: 'The design phase involves creating detailed designs for the new vehicle including its appearance, features, and specifications.',
+      }
+    },
     type: 'turbo',
   },
   {
     id: '5',
     position: { x: -250, y: 125 },
-    data: {title: 'Manufacturing'},
+    data: {
+      title: 'Manufacturing',
+      details:{
+        image: 'https://reactflow.dev/img/logo.svg',
+        text: 'This phase involves the actual production of the vehicle based on the designs.',
+      }
+    },
     type: 'turbo',
   },
   {
     id: '6',
     position: { x: -250, y: 250 },
-    data: { title: 'Marketing/Sales'},
+    data: { 
+      title: 'Sales',
+      details:{
+        image: 'https://reactflow.dev/img/logo.svg',
+        text: 'In the final phase, the new vehicle is marketed and sold to customers.',
+      }
+    },
     type: 'turbo',
   },
   {
     id: '7',
     position: { x: 0, y: -300 },
-    data: { title: 'External'},
+    data: { 
+      title: 'External',
+      details:{
+        image: 'https://reactflow.dev/img/logo.svg',
+        text: 'This panel represents the external factors that might affect the car manufacturing project.',
+      }
+    },
     type: 'turbo',
   },
   {
     id: '8',
     position: { x: 0, y: -200 },
-    data: { title: 'Internal'},
+    data: { 
+      title: 'Internal',
+      details:{
+        image: 'https://reactflow.dev/img/logo.svg',
+        text: 'This panel represents the internal factors that might affect the car manufacturing project.',
+      }
+    },
     type: 'turbo',
   },
   {
     id: '9',
     position: { x: 250, y: -350 },
-    data: { title: 'B2B'},
+    data: { 
+      title: 'B2B',
+      details:{
+        image: 'https://reactflow.dev/img/logo.svg',
+        text: 'This panel represents the business-to-business interactions in the car manufacturing project.',
+      }
+    },
     type: 'turbo',
   },
   {
     id: '10',
     position: { x: 250, y: -250},
-    data: { title: 'B2C'},
+    data: { 
+      title: 'B2C',
+      details:{
+        image: 'https://reactflow.dev/img/logo.svg',
+        text: 'This panel represents the business-to-consumer interactions in the car manufacturing project.',
+      }
+    },
     type: 'turbo',
   },
   {
     id: '11',
     position: { x: 500, y: -400},
-    data: { title: 'Online'},
+    data: { 
+      title: 'Online',
+      details:{
+        image: 'https://reactflow.dev/img/logo.svg',
+        text: 'This panel represents the online aspects of the car manufacturing project.',
+      }
+    },
     type: 'turbo',
   },
   {
     id: '12',
     position: { x: 500, y: -300},
-    data: { title: 'Interview'},
+    data: { 
+      title: 'Interview',
+      details:{
+        image: 'https://reactflow.dev/img/logo.svg',
+        text: 'This panel represents the interviews conducted during the car manufacturing project.',
+      }
+    },
     type: 'turbo',
   },
   {
     id: '13',
     position: { x: 500, y: -200,},
-    data: { title: 'Public Data'},
+    data: { 
+      title: 'Public Data',
+      details:{
+        image: 'https://reactflow.dev/img/logo.svg',
+        text: 'This panel represents the public data used in the car manufacturing project.',
+      }
+    },
     type: 'turbo',
   },
   {
     id: '14',
     position: { x: 500, y: -100},
-    data: { title: 'Health'},
+    data: { 
+      title: 'Health',
+      details:{
+        image: 'https://reactflow.dev/img/logo.svg',
+        text: 'This panel represents the health considerations in the car manufacturing project.',
+      }
+    },
     type: 'turbo',
   },
 ];

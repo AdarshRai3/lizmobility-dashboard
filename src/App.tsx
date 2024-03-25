@@ -7,18 +7,22 @@ import "./styles/app.scss"
 const Dashboard = lazy(() => import("./pages/Dashboard"));
 const Inspection= lazy(()=> import("./pages/Inspection"));
 const IssueTracker= lazy(()=> import("./pages/IssueTracker"));
+const Review=lazy(()=>import("./pages/Review"));
 const App = () => {
   return (
     <Suspense fallback={<Loader/>}>
        <Router>
         <Routes>
-          <Route path="/admin/Dashboard" element={<Dashboard/>} />
+          <Route path="/admin/dashboard" element={<Dashboard/>} />
         </Routes>
         <Routes>
-          <Route path="/admin/Inspection" element={<Inspection/>} />
+          <Route path="/admin/inspection" element={<Inspection/>} />
         </Routes>
         <Routes>
-          <Route path="/admin/IssueTracker" element={<IssueTracker/>} />
+          <Route path="/admin/issueTracker" element={<IssueTracker/>} />
+        </Routes>
+        <Routes>
+          <Route path="/admin/review" element={<Review/>} />
         </Routes>
        </Router>
     </Suspense>  

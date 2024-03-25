@@ -1,37 +1,49 @@
-import  { memo, ReactNode } from 'react'
+import { memo, ReactNode } from 'react';
 import { Handle, NodeProps, Position } from 'reactflow';
-import { FiCloud } from 'react-icons/fi';
+
+export type Details = {
+  image: string;
+  text: string;
+};
 
 export type TurboNodeData = {
   title: string;
   icon?: ReactNode;
   subline?: string;
-  bgcolor?:string;
-  details?:string;
+  bgcolor?: string;
+  details?: Details;
 };
 
 export default memo(({ data }: NodeProps<TurboNodeData>) => {
   return (
     <>
-      <div className="cloud gradient">
-        <div>
-          <FiCloud />
-        </div>
+      <div className="block">
+          <div className="title">{data.title}</div>
+            {data.details && (
+              <div>
+              <img src={data.details.image} alt="Details" />
+              <p>{data.details.text}</p>
+              </div>
+            )}
       </div>
-      <div className="wrapper gradient">
-        <div className="inner">
-         
-          <div className="body">
-             <div>
-               <div className="title">{data.title}</div>
-               <span>
-               {data.details && <div className="details">{data.details}</div>}
-               </span>
-             </div>
+      <div className="details">
+        <div className="wrapper gradient">
+          <div className="inner">
+            <div className="body">
+              <div>
+                <div className="title">{data.title}</div>
+                {/* {data.details && (
+                  <div>
+                    <img src={data.details.image} alt="Details" />
+                    <p>{data.details.text}</p>
+                  </div>
+                )} */}
+              </div>
+            </div>
+            <div className="note">Note</div>
+            <Handle type="target" position={Position.Left} />
+            <Handle type="source" position={Position.Right} />
           </div>
-         
-          <Handle type="target" position={Position.Left} />
-          <Handle type="source" position={Position.Right} />
         </div>
       </div>
     </>

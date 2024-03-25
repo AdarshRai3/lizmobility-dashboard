@@ -1,6 +1,6 @@
 import AdminSidebar from "../components/AdminSidebar"
 
-const IssueTracker= () => {
+const Review= () => {
   return (
     <div className = "admin-container">
 
@@ -11,4 +11,4 @@ const IssueTracker= () => {
   )
 }
 
-export default IssueTracker;
+export default Review;
